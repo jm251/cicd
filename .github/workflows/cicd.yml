@@ -6,6 +6,10 @@ on:
   pull_request:
     branches: [main]
 
+concurrency:
+  group: production-deployment
+  cancel-in-progress: false
+
 jobs:
   ci:
     name: CI
