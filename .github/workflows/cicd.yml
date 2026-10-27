@@ -78,7 +78,6 @@ jobs:
           context: .
           push: true
           tags: |
-            ${{ vars.DOCKERHUB_USERNAME }}/cicd:latest
             ${{ vars.DOCKERHUB_USERNAME }}/cicd:${{ github.sha }}
 
       - name: Trigger Render deploy
